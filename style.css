@@ -2,9 +2,6 @@
     display: grid;
     grid-template-rows: auto 1fr 0.25fr;
     height: 100%;
-    background-image: url(images/background.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 html,body{
@@ -12,6 +9,13 @@ html,body{
     margin: 0;
     color: aliceblue;
     font-family: 'Consolas', 'Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .introduction{
@@ -38,6 +42,7 @@ html,body{
 
 .menu[open] summary{
     background-color: rgba(220, 20, 60, 0.5);
+    backdrop-filter: blur(8px)
 }
 
 .menu-content{
@@ -47,6 +52,7 @@ html,body{
     bottom: 0;
     width: 100px;
     background-color: rgba(220, 20, 60, 0.5);
+    backdrop-filter: blur(8px)
 }
 
 .menu-content a{
@@ -58,4 +64,18 @@ html,body{
 
 .menu-content a:hover{
     background-color: rgba(220, 20, 60, 0.2);
+}
+
+.music {
+    display: flex;
+    /* grid-auto-rows: auto; */
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.music iframe {
+    flex: 1;
+    width: 320px;
 }
